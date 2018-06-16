@@ -30,6 +30,17 @@
                 <input id="dat" type="date" name="date" placeholder="date (mm-dd-yyyy)">
                 <input type="submit" value="Submit">
             </form>
+            <form action="/api/exercise/log" method="get">
+                <h3>GET users's exercise log:</h3>
+                <p>
+                    <code>GET /api/exercise/log</code>
+                </p>
+                <input id="username2" type="text" name="username" placeholder="username*">
+                <input id="from" type="date" name="from" placeholder="from (mm-dd-yyyy)">
+                <input id="to" type="date" name="to" placeholder="to (mm-dd-yyyy)">
+                <input id="limit" type="number" name="limit" placeholder="limit">
+                <input type="submit" value="Submit">
+            </form>
         </div>
         <p>
             <strong>GET users's exercise log: </strong>
