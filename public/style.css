@@ -1,64 +1,92 @@
-
 * {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 body {
-  font-family:sans-serif;
-  margin: 25px;
-  color: #222;
-  background-color: #f5f5f5;
+    font-family: sans-serif;
+    margin: 25px;
+    color: #222;
+    background-color: #eef;
 }
 
 h1 {
-  font-weight: bold;
-  
+    font-weight: bold;
 }
 
 .bold {
-  font-weight: bold;
+    font-weight: bold;
 }
 
 p {
-  max-width: 900px;
+    max-width: 900px;
 }
 
 form {
-  margin-bottom: 25px;
-  padding: 15px;
-  background-color: #87D37C;
-  display: inline-block;
-  width: 100%;
-  max-width: 340px;
-  border-radius: 5px;
+    margin-bottom: 25px;
+    padding: 15px 25px;
+    background-color: #bbf;
+    display: inline-block;
+    width: 100%;
+    max-width: 340px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px -1px rebeccapurple;
 }
 
 input {
-  display: block;
-  margin-bottom: 10px;
-  padding: 5px;
-  width: 100%;
-  border: 1px solid lightgrey;
-  border-radius: 3px;
-  font-size: 16px;
+    display: block;
+    margin-bottom: 10px;
+    padding: 5px 10px;
+    font-size: 1.2em;
+    width: 100%;
+    border: 1px solid lightgrey;
+    border-radius: 10px;
+    font-size: 16px;
 }
 
-input[type=submit] {
-  font-size: 16px;
-  border-radius: 3px;
-  background-color: #E4F1FE;
-  border: 1px solid grey;
-  box-shadow: 2px 2px #999;
-  cursor: pointer;
+input:focus {
+    box-shadow: 0px 0px 10px -2px red;
+    transform: scale(1.05);
 }
 
-input[type=submit]:hover {
-  background-color: #FFFEC4;
+input[type="submit"] {
+    font-size: 16px;
+    border-radius: 3px;
+    background-color: #fdc;
+    border: 1px solid grey;
+    box-shadow: 0px 0px 12px -2px #999;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #511;
+    color: #fbb;
+}
+
+pre {
+    display: flex;
+    background: black;
+    color: #cfc;
+    border-radius: 20px;
+    padding: 10px 5px;
+    border: 2px solid limegreen;
 }
 
 code {
-  font-family: monospace;
-  font-size: 1.2em;
-  background-color: #FFFEC4;
-  padding: 2px;
+    font-family: monospace;
+    font-size: 1.2em;
+    background: black;
+    color: #cfc;
+    padding: 4px 10px;
+    border-radius: 6px;
+}
+
+.forms {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.forms form {
+    margin: 20px;
 }

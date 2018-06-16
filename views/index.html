@@ -2,44 +2,71 @@
 <html>
 
 <head>
-  <title>Exercise Tracker | Free Code Camp</title>
-  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css">
-  <link href="style.css" rel="stylesheet" type="text/css">
+    <title>Exercise Tracker | Free Code Camp</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css">
+    <link href="style.css" rel="stylesheet" type="text/css">
 </head>
 
 <body>
-  <div class="container">
-    <h1>Exercise tracker</h1>
-    <form action="/api/exercise/new-user" method="post">
-      <h3>Create a New User</h3>
-      <p>
-        <code>POST /api/exercise/new-user</code>
-      </p>
-      <input id="uname" type="text" name="username" placeholder="username">
-      <input type="submit" value="Submit">
-    </form>
-    <form action="/api/exercise/add" method="post">
-      <h3>Add exercises</h3>
-      <p>
-        <code>POST /api/exercise/add</code>
-      </p>
-      <input id="uname" type="text" name="username" placeholder="username*">
-      <input id="desc" type="text" name="description" placeholder="description*">
-      <input id="dur" type="text" name="duration" placeholder="duration* (mins.)">
-      <input id="dat" type="date" name="date" placeholder="date (mm-dd-yyyy)">
-      <input type="submit" value="Submit">
-    </form>
-    <p>
-      <strong>GET users's exercise log: </strong>
-      <code>GET /api/exercise/log?{userId}[&amp;from][&amp;to][&amp;limit]</code>
-    </p>
-    <p>
-      <strong>{ }</strong> = required,
-      <strong>[ ]</strong> = optional</p>
-    <p>
-      <strong>from, to</strong> = dates (yyyy-mm-dd);
-      <strong>limit</strong> = number</p>
-  </div>
+    <div class="container">
+        <h1>Exercise tracker</h1>
+        <div class="forms">
+            <form action="/api/exercise/new-user" method="post">
+                <h3>Create a New User</h3>
+                <p>
+                    <code>POST /api/exercise/new-user</code>
+                </p>
+                <input id="uname" type="text" name="username" placeholder="username">
+                <input type="submit" value="Submit">
+            </form>
+            <form action="/api/exercise/add" method="post">
+                <h3>Add exercises</h3>
+                <p>
+                    <code>POST /api/exercise/add</code>
+                </p>
+                <input id="username" type="text" name="username" placeholder="username*">
+                <input id="desc" type="text" name="description" placeholder="description*">
+                <input id="dur" type="text" name="duration" placeholder="duration* (mins.)">
+                <input id="dat" type="date" name="date" placeholder="date (mm-dd-yyyy)">
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+        <p>
+            <strong>GET users's exercise log: </strong>
+            <code>GET /api/exercise/log?{username}[&amp;from][&amp;to][&amp;limit]</code>
+            <hr/> <strong> Example:</strong> <a href="https://granite-psychology.glitch.me/api/exercise/log?username=rajatkn&limit=3&from=06-08-2018&to=06-30-2018" target="_blank"><code> https://granite-psychology.glitch.me/api/exercise/log?username=rajatkn&limit=3&from=06-08-2018&to=06-30-2018</code></a>
+            <hr/> <strong>Example Output:</strong> <pre><code>
+{
+  "username":"rajatkn",
+  "from":"Fri Jun 08 2018",
+  "to":"Sat Jun 30 2018",
+  "limit":"3",
+  "exercises":[
+  {
+    "description":"bowling",
+    "duration":"30",
+    "date":"Sat Jun 16 2018"
+  },
+  {
+    "description":"yoga",
+    "duration":"30",
+    "date":"Sat Jun 16 2018"
+  },
+  {
+    "description":"Yoga",
+    "duration":"30",
+    "date":"Mon Jun 18 2018"
+  }]
+}
+      </code></pre>
+        </p>
+        <p>
+            <strong>{ }</strong> = required,
+            <strong>[ ]</strong> = optional</p>
+        <p>
+            <strong>from, to</strong> = dates (mm-dd-yyyy);
+            <strong>limit</strong> = number</p>
+    </div>
 </body>
 
 </html>
