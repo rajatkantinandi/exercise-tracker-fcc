@@ -1,0 +1,32 @@
+{
+  "name": "exercise-tracker-fcc",
+  "version": "0.1.0",
+  "description": "A REST API project, part of Free Code Camp's curriculum",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "cors": "^2.8.4",
+    "dotenv": "^6.0.0",
+    "express": "^4.16.3",
+    "mongodb": "^3.0.10",
+    "nodemon": "^1.17.5"
+  },
+  "license": "MIT",
+  "keywords": [
+    "node",
+    "gomix",
+    "express"
+  ],
+  "author": "Rajat Kanti Nandi",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rajatkantinandi/exercise-tracker-fcc.git"
+  },
+  "bugs": {
+    "url": "https://github.com/rajatkantinandi/exercise-tracker-fcc/issues"
+  },
+  "homepage": "https://github.com/rajatkantinandi/exercise-tracker-fcc#readme"
+}
